@@ -21,9 +21,9 @@ Os seguintes requisitos foram cumpridos:
 ### Sobre o projeto
 Para utilizar melhor tanto o redux quanto o combo axios+api  a ideia foi criar um buscador de cervejas ao maior estilo google as buscas podem ser por nome, por lúpulo ou por comidas de acompanhamento.
 Os links são compartilháveis e seguem o seguinte padrão:
- - '/': Home-page
- - '/search/:query/type/:type-of-search': buscas realizadas na ferramenta
- - '/beer/:id': informações detalhadas sobre uma cerveja
+ - *'/'*: Home-page
+ - *'/search/:query/type/:type-of-search'*: buscas realizadas na ferramenta
+ - *'/beer/:id'*: informações detalhadas sobre uma cerveja
 
 ### Inicializando o projeto
 Atualmente o projeto já possui um deploy que pode ser acessado por esse link:

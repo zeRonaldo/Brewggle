@@ -6,7 +6,7 @@ import ErrorPage from './ErrorPage'
 class ListOfBeers extends Component{
    
     render(){
-        const {beers, query} = this.props
+        const {beers} = this.props
         let items = []
        
         if(Object.entries(beers).length !== 0 && beers.constructor === Object){
