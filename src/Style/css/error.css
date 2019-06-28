@@ -1,14 +1,14 @@
 div.container {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 div.container div {
   display: inline-flex;
-  align-items: center;
   flex: 2;
+  align-items: center;
 }
 div.container div aside {
   margin: 20px;
