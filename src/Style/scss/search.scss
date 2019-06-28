@@ -1,0 +1,44 @@
+@import 'colors';
+
+.search-result-list{
+    max-width: 800px;
+    width: 100%;
+    flex: 1;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-family: $font;
+    margin-top: 10px;
+    .search-result{
+        .main-info{
+            flex-direction: row;
+            justify-content: space-between;
+            height: 100%;
+        }
+        h3,h4,p{
+            margin: 0;
+            line-height: 1.2em;
+        }
+        h3{
+            font-size: 1.4em;
+            line-height: 1.6em;
+            color:$contrast;
+            display: inline-flex;
+        }
+        h4{
+            font-size: 1.1em;
+            line-height: 1.3em;
+            color: darken($contrast, 20);
+            margin: 5px 0;
+        }
+        .pill{
+            float: right;
+        }
+        p{
+            color: lighten($text, 15);
+            line-height: 1.4em;
+            margin: 0 0 35px
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@import 'colors';
+
+header{
+    height:72px;
+    max-height: 72px;
+    flex: 1;
+}
+
+.content{
+    display: flex;
+    flex:2;
+    flex-direction: column;
+    justify-content: center;
+
+    .logo{
+        align-self: center;
+        a>img{
+            max-width: 800px;
+            margin:30px 0;
+            width: 100%;
+        }
+    }
+
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-self: center;
+        max-width: 800px;
+        width: 100%;
+        border-radius: 25px;
+        background-color: $lightgray;
+        border: 7px solid $lightgray;
+        .search-icon>img{
+            color: $contrast
+        }
+        form{
+            display:flex;
+            justify-content:stretch;
+            flex:1;
+            outline: none;
+            input{
+                flex:3;
+                font-size: 1em;
+                max-width: 700px;
+                min-width: 300px;
+                max-height: 1.5em;
+                background-color: $lightgray;
+                margin: 0 5px;
+                border:none;
+                &:focus{
+                    box-shadow: 0 0 0 0 $lightgray;
+                    border: none;
+                    outline: $lightgray;
+                }
+                
+                                
+            }
+            #type-of-search{
+                    flex: 1;
+                    display: block;
+                    font-size: 1em;
+                    font-family: $font;
+                    color: #444;
+                    line-height: 1.3;
+                    padding: 0;
+                    width: 100%;
+                    max-width: 100%; 
+                    box-sizing: border-box;
+                    margin: 0;
+                    border: none;
+                    box-shadow: none;
+                    border-radius: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background-color: $lightgray;
+                    margin: 0 5px;
+                   
+                }
+                &::-ms-expand {
+                    display: none;
+                }
+                &:hover {
+                    border-color:$lightgray;
+                }
+                &:focus {
+                    border-color:$lightgray;
+                    color: #222; 
+                    box-shadow: 0 0 0 0 $lightgray;
+                    outline: $lightgray;
+                }
+                option {
+                    font-weight:normal;
+                }
+            
+        }
+        
+
+    }
+    .actions{
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        max-width: 800px;
+        width: 100%;
+        align-self: center;
+        .gray-button {
+            background: #E0E0E0;
+            width: 160px;
+            padding: 8px;
+            margin: 20px 15px;
+            box-shadow: $shadow;
+            border-radius: 5px;
+            border: none;
+            font-family: $font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1em;
+            line-height: 15px;
+            color: $text;
+            text-align: center;
+            text-decoration: none;
+            &:hover{
+                background: $contrast
+                
+            }
+            &:active{
+                background: $text;
+                color: $lightgray
+            }
+        }
+    }
+    
+}

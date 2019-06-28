@@ -1,0 +1,15 @@
+@import 'colors';
+
+.pill{
+    background-color: darken($contrast, 10);
+    color: $text;
+    text-shadow: none;
+    padding: 5px 10px;
+    margin-top:5px;
+    border-radius: 15px;
+    display: inline-flex;
+    
+    box-shadow: $shadow;
+    font-size: 0.75em;
+    font-weight: 500;
+}

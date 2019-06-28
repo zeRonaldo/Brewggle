@@ -1,0 +1,37 @@
+@import 'colors';
+
+div.container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    div{
+        display: inline-flex;
+        align-items: center;
+        flex: 2;
+        aside{
+            margin: 20px;
+            img{
+                max-width: 450px;
+                min-width: 150px;
+                width: 100%;
+            }
+        }
+        main{
+            h1{
+                color: $contrast;
+                text-shadow: $shadow-text;
+                text-align: right;
+            }
+            h3{
+                color: darken($contrast, 15)!important;
+                text-align: right
+            }
+        } 
+    }
+    footer{
+        margin: 20px
+    }
+    
+}

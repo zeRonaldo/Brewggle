@@ -1,0 +1,39 @@
+@import 'colors';
+
+.beer-container{
+    display: flex;
+    flex: 1;
+    max-width: 800px;
+    align-self: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 20px 0;
+    background-color: lighten($lightgray, 5);
+    padding: 10px 25px;
+    border-radius: 5px;
+    box-shadow: $shadow;
+    .beer-main-pic{
+        max-width: 210px;
+        img{
+            max-height: 150px;
+            margin: 0 30px;
+            max-width: 150px;
+        }
+       
+    }
+    .beer-main-info{
+        min-width: 200px;
+        color: $bg;
+        text-shadow: $shadow-text;
+    }
+}
+h3, h4{
+    color: $bg;
+    text-shadow: $shadow-text
+}
+p{
+    color: $text
+}
+.beer-info{
+    display: inline-flex
+}
