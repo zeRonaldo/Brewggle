@@ -12,6 +12,11 @@
     border-radius: 5px;
     background-color: lighten($lightgray, 5);
     box-shadow: $shadow;
+    @media screen and (max-width: $break-size) {
+        width: auto;
+        padding:20px;
+        margin: 0;
+    }
     .beer-main-pic{
         display: flex;
         align-content: center;
@@ -56,9 +61,15 @@
         text-shadow: $shadow-text;
         h1{
             margin: .5em 0;
+            @media screen and (max-width: $break-size) {
+                font-size: 1.3em
+            }
         }
         h2{
             margin: .35em 0;
+            @media screen and (max-width: $break-size) {
+                font-size: 0.9em
+            }
         }
     }
 }
@@ -67,7 +78,10 @@ h3, h4{
     text-shadow: $shadow-text
 }
 p{
-    color: $text
+    color: $text;
+    @media screen and (max-width: $break-size) {
+        font-size: 0.8em
+    }
 }
 .beer-info{
     display: inline-flex;

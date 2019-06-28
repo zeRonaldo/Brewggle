@@ -7,11 +7,25 @@ header{
     justify-content: center;
     align-content: center;
     box-shadow: $shadow;
+    @media screen and (max-width: $break-size) {
+        max-height: 72px;
+        min-height: 40px;
+        padding: 10px 0;
+    }
     .logo{
         align-self: center;
         margin: 10px 20px 0;
+        @media screen and (max-width: $break-size) {
+            align-self: center;
+            margin: 5px 10px 0;
+        }
         a>img{
             width: 120px;
+            @media screen and (max-width: $break-size) {
+                min-width: 60px;
+                width: 100%;
+            }
+            
         }
     }
     .search-bar {
@@ -24,14 +38,25 @@ header{
         border-radius: 25px;
         background-color: $lightgray;
         border: 7px solid $lightgray;
+        @media screen and (max-width: $break-size) {
+
+        }
         .search-icon>img{
-            color: $contrast
+            color: $contrast;
+            @media screen and (max-width: $break-size) {
+                min-width: 60px;
+                width: 100%;
+            }
         }
         form{
             display:flex;
             justify-content:stretch;
             flex:1;
             outline: none;
+            @media screen and (max-width: $break-size) {
+                align-items: center;
+                justify-content: center;
+            }
             input{
                 flex:3;
                 font-size: 1em;
@@ -41,6 +66,12 @@ header{
                 background-color: $lightgray;
                 margin: 0 5px;
                 border:none;
+                @media screen and (max-width: $break-size) {
+                    margin: 0 5px;
+                    border: none;
+                    width: 100%;
+                    height: 1em;
+                }
                 &:focus{
                     box-shadow: 0 0 0 0 $lightgray;
                     border: none;
@@ -69,6 +100,10 @@ header{
                     appearance: none;
                     background-color: $lightgray;
                     margin: 0 5px;
+                    @media screen and (max-width: $break-size) {
+                        font-size: 0.65em;
+                        line-height: 0.85em;
+                    }
                    
                 }
                 &::-ms-expand {
@@ -88,35 +123,5 @@ header{
                 }
             
         }
-    }
-
-    .login-button{
-        background-color: $contrast;
-        width: 80px;
-        line-height: 1.2em;
-        font-size: 1em;
-        font-weight: 500;
-        font-family: $font;
-        padding: 8px;
-            margin: 20px 15px;
-            box-shadow: $shadow;
-            border-radius: 5px;
-            border: none;
-            font-family: $font;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 1em;
-            line-height: 15px;
-            color: $text;
-            text-align: center;
-            text-decoration: none;
-            &:hover{
-                background: $lightgray
-                
-            }
-            &:active{
-                background: $text;
-                color: $lightgray
-            }
     }
 }

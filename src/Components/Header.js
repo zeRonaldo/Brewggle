@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Logo from './Logo'
 import SearchBarMain from './SearchBarMain'
-import LogedPrompt from './LogedPrompt'
 import '../Style/css/header.css'
 
 class Header extends Component {
@@ -10,7 +9,6 @@ class Header extends Component {
             <header>
                 <Logo size="small"/>
                 <SearchBarMain/>
-                <LogedPrompt/>
             </header>
         )
         
