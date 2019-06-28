@@ -5,17 +5,21 @@ import '../Style/css/beer.css';
 
 class Beer extends Component{
     
-
     render(){
+        
         return(
            <React.Fragment>
-                <Header />
-                <FullBeer />
+               
+                    <Header />
+                    <FullBeer />
+
            </React.Fragment> 
            
         )
     }
 }
 
-export default (Beer)
+
+
+export default Beer
 

@@ -6,14 +6,19 @@ import '../Style/css/search.css'
 class Search extends Component{
 
     render(){
+      
         return(
             <React.Fragment>
-                <Header/>
-                <ListOfBeers/>
+                 
+                    <Header />
+                    <ListOfBeers />
+               
+               }
             </React.Fragment>
         )
     }
 }
+
 
 export default Search
 

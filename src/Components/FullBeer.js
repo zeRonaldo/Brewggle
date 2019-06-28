@@ -50,9 +50,9 @@ class FullBeer extends Component{
     render(){
         const {beer} = this.props
 
-        let show
-
-        if( beer !== null) {
+        let show 
+        
+        if( beer !== null ) {
             show = this.component(Object.values(beer))
         }else{
             show = <ErrorPage headline="Oops, an error ocurred!" text="Seems like the beer you searched for is not available"/>

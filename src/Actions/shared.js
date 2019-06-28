@@ -1,15 +1,15 @@
-import {showLoading, hideLoading} from 'react-redux-loading-bar'
 import { searchBeers, searchAllBeers, getBeer } from '../Utils/PunkApi';
 import { setBeers } from './Beers';
 import { setBeer } from './Beer';
+import { setLoading } from './Search';
 
 export function AllBeersToList() {
     return(dispatch) => {
-        dispatch(showLoading())
+        dispatch(setLoading(true))
         return searchAllBeers()
             .then((response) => {
                 dispatch(setBeers(response))
-                dispatch(hideLoading())
+                dispatch(setLoading(false))
             })
     }
 }
@@ -17,11 +17,11 @@ export function AllBeersToList() {
 
 export function searchedBeersToList(query, query_type) {
     return(dispatch) => {
-        dispatch(showLoading())
+        dispatch(setLoading(true))
         return searchBeers(query, query_type)
             .then((result) => {
                 dispatch(setBeers(result))
-                dispatch(hideLoading())
+                dispatch(setLoading(false))
             })
             
             
@@ -31,11 +31,11 @@ export function searchedBeersToList(query, query_type) {
 
 export function getBeerById(id) {
     return(dispatch) => {
-        dispatch(showLoading())
+        dispatch(setLoading(true))
         return getBeer(id)
             .then((response) => {
                 dispatch(setBeer(response))
-                dispatch(hideLoading())
+                dispatch(setLoading(false))
             })
     }
 }

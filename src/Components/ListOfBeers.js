@@ -23,7 +23,7 @@ class ListOfBeers extends Component{
 
         return (
             <React.Fragment>
-                {Object.entries(beers).length !== 0 ?
+                {Object.entries(beers).length !== 0?
                     items
                 :
                     <ErrorPage headline="Awww maaaaan!" text="According to my calculations there is not a single beer like that in our DataBases" />
@@ -38,7 +38,7 @@ const mapStateToProps = (state) => {
     return{
         beers: state.beers,
         query: state.search.query,
-        type: state.search.type
+        type: state.search.type,
     }
 }
 

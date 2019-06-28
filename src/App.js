@@ -3,16 +3,21 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import Main from './Views/Main'
 import Search from './Views/Search'
 import Beer from './Views/Beer'
-import {LoadingBar} from 'react-redux-loading-bar'
+import Loading from './Components/Loading';
+import {connect} from 'react-redux'
+import ErrorPage from './Components/ErrorPage';
 
-function App() {
+function App(props) {
   return (
       <React.Fragment>
-          <LoadingBar />
+          <Loading loading={props.loading}/>
           <BrowserRouter>
             <Route exact path="/" component={Main}/>
             <Route exact path="/beer/:id" component={Beer}/>
-            <Route path="/search/:query/type/:type" component={Search}/>
+            <Route exact path="/search/:query/type/:type" component={Search}/>
+            <Route path="/">
+              <ErrorPage headline="You are going far young one" text="The page you're trying to reach doesn't exist" />
+            </Route>
           </BrowserRouter>
       </React.Fragment>
       
@@ -20,4 +25,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+      loading: state.search.loading
+  }
+}
+
+export default connect(mapStateToProps)(App);

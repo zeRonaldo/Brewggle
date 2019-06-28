@@ -9,7 +9,7 @@ class ShortBeer extends Component{
 
         return(
             <li key={id} className="search-result">
-                <Link to={`/beer/${id}`}>
+                <Link to={`/beer/${id}`} key={id}>
                     <div className="main-info">
                         <h3>{name}</h3>
                         <Pill text={yeast}/>

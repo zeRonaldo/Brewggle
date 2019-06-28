@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import '../Style/css/main.css';
 import { connect } from 'react-redux'
-
-import HeaderMain from './../Components/HeaderMain';
 import Logo from './../Components/Logo';
 import GrayButton from './../Components/GrayButton';
 import SearchBarMain from '../Components/SearchBarMain';
@@ -14,7 +12,7 @@ class Main extends Component{
         return(
             <React.Fragment>
                 <header>
-                    <HeaderMain></HeaderMain>
+                    
                 </header>
                 
                 <section className="content">
