@@ -41,13 +41,12 @@ class SearchBarMain extends Component {
 
      componentWillMount = () => {
         const {match, query, type} = this.props
-
+        
         if(Object.entries(match.params).length === 0 && match.params.constructor === Object){
             this.setSearchBar('0', type)
         }else if(match.params.query && match.params.type ){
-            if(query === '0'){
-                this.setSearchBar(match.params.query, match.params.type)
-            }
+            this.setSearchBar(match.params.query, match.params.type)
+
         }
         
     }

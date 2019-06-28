@@ -13,8 +13,6 @@ import '../Style/css/error.css'
     render() {
 
         if(this.props.loading !== true){
-            return (<div></div>)
-        }else{
             return (
                 <div className="container">
                     <div>
@@ -32,6 +30,9 @@ import '../Style/css/error.css'
                     </footer>
                 </div>
             )
+            
+        }else{
+            return (<div></div>)
         }
 
     }

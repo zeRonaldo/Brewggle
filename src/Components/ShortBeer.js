@@ -13,7 +13,6 @@ class ShortBeer extends Component{
                     <div className="main-info">
                         <h3>{name}</h3>
                         <Pill text={yeast}/>
-
                     </div>
                     
                     <h4>{tagline}</h4>

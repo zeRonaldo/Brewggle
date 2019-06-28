@@ -3,28 +3,63 @@
 .beer-container{
     display: flex;
     flex: 1;
-    max-width: 800px;
-    align-self: center;
-    width: 100%;
     flex-direction: column;
+    align-self: center;
+    max-width: 800px;
+    width: 100%;
     margin: 20px 0;
-    background-color: lighten($lightgray, 5);
     padding: 10px 25px;
     border-radius: 5px;
+    background-color: lighten($lightgray, 5);
     box-shadow: $shadow;
     .beer-main-pic{
-        max-width: 210px;
-        img{
-            max-height: 150px;
-            margin: 0 30px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        max-width: 150px; 
+        max-height: 150px;
+        width: 100%;
+        height: 100%;
+        margin: 0 30px 0 0;
+        padding:10px;
+        background-color: $contrast;
+        box-shadow: $shadow;
+        border-radius: 5px;
+        
+       
+        img,div{
             max-width: 150px;
         }
-       
+        div{
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            align-self: center;
+            height: 100%;
+            width: auto;
+            padding: 0 20px;
+            background-color: $text;
+            color: $lightgray;
+            font-weight: bolder;
+            text-align: center;
+
+        }
+        img{
+            max-height: 150px;
+            width: auto;
+            
+        }
     }
     .beer-main-info{
         min-width: 200px;
         color: $bg;
         text-shadow: $shadow-text;
+        h1{
+            margin: .5em 0;
+        }
+        h2{
+            margin: .35em 0;
+        }
     }
 }
 h3, h4{
@@ -35,5 +70,25 @@ p{
     color: $text
 }
 .beer-info{
-    display: inline-flex
+    display: inline-flex;
+    border-bottom: 1px solid $lightgray;
+    padding-bottom: 20px;
+    min-height: 170px;
+}
+.beer-details{
+    table{
+        width: 100%;
+        td{
+            font-size: 0.85em;
+            color: $text;
+        }
+    }
+    h5{
+        margin: 1.2em 0 .5em 0;
+    }
+    ul{
+        list-style: circle;
+        font-size: 0.85em;
+        color: $text;
+    }
 }

@@ -14,6 +14,7 @@ class ListOfBeers extends Component{
                 beerList.map((beerItem) => 
                 items.push(
                     <ShortBeer
+                        key={beerItem.id}
                         id={beerItem.id}
                         beer={beerItem}/>
                 )
